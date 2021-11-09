@@ -21,7 +21,7 @@
     <nav class="navbar">
         <div class="navbar__logo">
             <i class="fas fa-credit-card"></i> 
-            <a href="">PopMovie</a>
+            <a href="" class="pop">PopMovie</a>
         </div>
         <!--일렬정렬위해 div태그보단 순서있는 ul태그 활용-->
         <ul class="navbar__menu">
@@ -57,7 +57,7 @@
         </div>
         <div class="movie_list_box">
             <ul class="movie_list">
-                <li class="poster"> <img src="./files/poster/poster1.jpg" alt=""></li>
+                <li class="poster"> <img class="img" src="./files/poster/poster1.jpg" alt=""></li>
                 <li class="poster"> <img src="./files/poster/poster2.jpg" alt=""></li>
                 <li class="poster"> <img src="./files/poster/poster3.jpg" alt=""></li>
                 <li class="poster"> <img src="./files/poster/poster4.jpg" alt=""></li>
@@ -147,8 +147,9 @@
                       
                     </td>
                     <td>
-                         <input type="button" id="btnSelect" value="담기">
-                         <input type="button" id="btnSelect1" value="비우기">
+                    	<button id="btnSelect"><i class="fas fa-shopping-cart"></i></button>
+                    	<button id="btnSelect1"><i class="fas fa-trash-alt"></i></button>
+                        
                     </td>
                 </tr>
                </table>
@@ -162,9 +163,9 @@
                 <div id ="tab4" data-tab-content class="items">
                     <div class="chart">
                         <ul id="tbd" class="maketlist">
-                         <h2>총 주문내역  <button id="button1">초기화</button></h2>
+                         <h2>장바구니  <button id="button1"><i class="fas fa-shopping-cart"></i></button></h2>
                            	   <li></li>
-                            
+                            <table id= chart2 align=center></table>
                         </ul>
 
                     </div>

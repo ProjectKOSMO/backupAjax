@@ -1,11 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&family=Oxygen:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Mochiy+Pop+P+One&family=Oxygen:wght@300;400;700&display=swap');
+
+
+
+
+
+
+
+
 /* ===============================================최상단 popmovie 메뉴==========================================*/
 .navbar{  
     display : flex; 
     justify-content: space-between; 
     align-items: center; 
-    background-color:gainsboro;
-    padding : 8px 12px; 
+    background-color:black;
+    color:white;
+    padding : 8px 12px;
+    
+     
 }
  
 
@@ -26,8 +39,13 @@ a {
 }
 
 .navbar__logo i{
-    color : black;
+    color:white;
 }
+
+.pop{
+	color:white;
+}
+
 
 .navbar__menu {
     display: flex; /*硫붾돱瑜� �씪�젹濡� 諛곗튂*/
@@ -40,8 +58,9 @@ a {
 }
 
 .navbar__menu li:hover {
-    background-color: rgb(143, 111, 111);
+    background-color: tomato;
     border-radius: 10px; /*�뀒�몢由� �뫁湲�寃�*/
+    color:white;
 }
 
 .navbar__icons{
@@ -64,9 +83,10 @@ a {
 /* =====================================================================================body 전체설정 	*/
 body {font-family: 'Mochiy Pop P One', sans-serif;
     margin : 0; 
-    font-family: 'Source Sans Pro';
-    background-color: black;
+    font-family: 'Oxygen', sans-serif;
+    background-color: white;
     text-align: center;
+    letter-spacing: 2px;
 }
 /*========================================================================================영화 탭*/
 .items{
@@ -79,14 +99,22 @@ body {font-family: 'Mochiy Pop P One', sans-serif;
 .items.active{
     display:inline-block;
 }
-.inner_back{
+.inner_back{    
+	/*
     width: 30%;
     height: 15%;
     
     max-width:100%;
     max-height:100%;
-
+*/
+ width:500px;
+ height:500px;
+ box-shadow:30px 20px 20px rgba(0, 0, 0, 0.4);
 }
+
+
+
+
 
 .movie_list_box{
     margin-top: 3%;
@@ -104,23 +132,26 @@ body {font-family: 'Mochiy Pop P One', sans-serif;
     height: 30vh;
     width:70vw;
     display: flex;
-    
-    
+
 }
 
 .poster{ /*=============================하단 포스터================================= 6개*/
     margin-left: 1%;
     margin-right: 1%;
-    
+    border-radius: 10px;
     height:100%;
     width: 15%;
     max-height: 100%;
     display:flex;
-   
+   	
     overflow: hidden;
     
- 
 }
+.poster:hover{
+	box-shadow:10px 20px 10px rgba(0, 0, 0, 0.4);
+}
+
+
 /*=================================================================================먹거리 메뉴판*/
 .menupan{
     background:white;
@@ -161,8 +192,8 @@ body {font-family: 'Mochiy Pop P One', sans-serif;
     background-color: white;
     width:100vh;
     height:150vh;
- 
-    border:solid gray 15px;
+ 	
+    border:2px solid rgba(0,0,0,0.2);
     border-radius: 120px;
     overflow: hidden;
 }
@@ -189,7 +220,7 @@ body {font-family: 'Mochiy Pop P One', sans-serif;
     .navbar__toogleBtn{
         display: block;
     }
-
+	
  
     /*濡쒓퀬,硫붾돱諛붽� �닔吏곸쑝濡� �굹�삤�룄濡�*/
     .navbar {
@@ -221,5 +252,49 @@ body {font-family: 'Mochiy Pop P One', sans-serif;
     .navbar__icons.active {
         display :flex;
     }
+    .inner_back{
+    	width: 350px;
+    	height:350px;
+    }
+    .poster{
+    	object-fit:cover;
+    }
 }
+
+#btnSelect,
+#btnSelect1 {
+	width:50px;
+	height:50px;
+	border:none;
+	border-radius:25px;
+}
+
+#btnSelect:hover,
+#btnSelect1:hover{
+	background-color:tomato;
+	color:white;
+}
+
+
+
+#button1{
+	width:50px;
+	height:50px;
+	border:none;
+	border-radius:25px;
+}
+#button1:hover{
+	background-color:tomato;
+	color:white;
+}
+#tbd{
+	font-family: 'Arimo', sans-serif;	
+}
+
+
+
+
+
+
+
  

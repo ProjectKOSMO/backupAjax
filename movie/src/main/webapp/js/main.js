@@ -103,42 +103,86 @@ function submit_poster(s){ // 메인포스터 더블클릭시 장바구니에 �
 		if (sol == "poster1"){ // 메인포스터 더블클릭했을때 poster1 =일경우 movie_Name 극한직업 과 가격출력해주는 코드 (다른영화도 마찬가지)
 			movie_ticket +=1;
 			alert(movie_Name + ' ' + movie_ticket +'매 장바구니에 담겼습니다.'   )
-			$('#tbd >li >.movie1').remove()
-			$('#tbd >li').append("<li id='foodlist' class='movie1'>"+ movie_Name +" : " + movie_ticket +"매 " + (movie_ticket*movie_price) +"원 </li>");
+			//$('#tbd >li >.movie1').remove()
+			
+			//$('#tbd >li').append("<li id='foodlist' class='movie1'>"+ movie_Name +" : " + movie_ticket +"매 " + (movie_ticket*movie_price) +"원 </li>");
+			$('.movie1').remove()
+			$('#chart2').append('<tr class="movie1">'+
+			    		  '<td>' + movie_Name + " : " + '</td>' +
+			    		  '<td width = "25px">' + movie_ticket + '</td>' +
+			    		  '<td>' + "매" + '</td>' +
+			    		  '<td width = "50px">'+ movie_ticket*movie_price +'</td>'+
+			    		  '<td>'+'원'+'</td>'+
+			    		  '</tr>')
 		}
 			
 		if (sol == "poster2"){
 			movie_ticket2 +=1;
 			alert(movie_Name2 + ' ' + movie_ticket2 +'매 장바구니에 담겼습니다.'   )
-			$('#tbd >li >.movie2').remove()
-			$('#tbd >li ').append("<li id='foodlist' class='movie2'>"+ movie_Name2 +" : " + movie_ticket2 +"매 " + (movie_ticket2*movie_price2) +"원 </li>");
+			//$('#tbd >li >.movie2').remove()
+			//$('#tbd >li ').append("<li id='foodlist' class='movie2'>"+ movie_Name2 +" : " + movie_ticket2 +"매 " + (movie_ticket2*movie_price2) +"원 </li>");
+			$('.movie2').remove()
+			$('#chart2').append('<tr class="movie2">'+
+			    		  '<td>' + movie_Name2 + " : " + '</td>' +
+			    		  '<td width = "25px">' + movie_ticket2 + '</td>' +
+			    		  '<td>' + "매" + '</td>' +
+			    		  '<td width = "50px">'+ movie_ticket2*movie_price2 +'</td>'+
+			    		  '<td>'+'원'+'</td>'+
+			    		  '</tr>')
 		}		
 		if (sol == "poster3"){
 			movie_ticket3 +=1;
 			alert(movie_Name3 + ' ' + movie_ticket3 +'매 장바구니에 담겼습니다.'   )
-			$('#tbd >li >.movie3').remove()
-			$('#tbd >li ').append("<li id='foodlist' class='movie3'>"+ movie_Name3 +" : " + movie_ticket3 +"매 " + (movie_ticket3*movie_price3) +"원 </li>");
+			//$('#tbd >li >.movie3').remove()
+			//$('#tbd >li ').append("<li id='foodlist' class='movie3'>"+ movie_Name3 +" : " + movie_ticket3 +"매 " + (movie_ticket3*movie_price3) +"원 </li>");
+			$('.movie3').remove()
+			$('#chart2').append('<tr class="movie3">'+
+			    		  '<td>' + movie_Name3 + " : " + '</td>' +
+			    		  '<td width = "25px">' + movie_ticket3 + '</td>' +
+			    		  '<td>' + "매" + '</td>' +
+			    		  '<td width = "50px">'+ movie_ticket3*movie_price3 +'</td>'+
+			    		  '<td>'+'원'+'</td>'+
+			    		  '</tr>')
 		}
 	
 		if (sol == "poster4"){
 			movie_ticket4 +=1;
 			alert(movie_Name4 + ' ' + movie_ticket4 +'매 장바구니에 담겼습니다.'   )
-			$('#tbd >li >.movie4').remove()
-			$('#tbd >li ').append("<li id='foodlist' class='movie4'>"+ movie_Name4 +" : " + movie_ticket4 +"매 " + (movie_ticke4t*movie_price4) +"원 </li>");
+			$('.movie4').remove()
+			$('#chart2').append('<tr class="movie4">'+
+			    		  '<td>' + movie_Name + " : " + '</td>' +
+			    		  '<td width = "25px">' + movie_ticket4 + '</td>' +
+			    		  '<td>' + "매" + '</td>' +
+			    		  '<td width = "50px">'+ movie_ticket4*movie_price4 +'</td>'+
+			    		  '<td>'+'원'+'</td>'+
+			    		  '</tr>')
 		}
 		
 		if (sol == "poster5"){
 			movie_ticket5 +=1;
 			alert(movie_Name5 + ' ' + movie_ticket5 +'매 장바구니에 담겼습니다.'   )
-			$('#tbd >li >.movie5').remove()
-			$('#tbd >li ').append("<li id='foodlist' class='movie5' >"+ movie_Name5 +" : " + movie_ticket5 +"매 " + (movie_ticket5*movie_price5) +"원 </li>");
+			$('.movie5').remove()
+			$('#chart2').append('<tr class="movie5">'+
+			    		  '<td>' + movie_Name5 + " : " + '</td>' +
+			    		  '<td width = "25px">' + movie_ticket5 + '</td>' +
+			    		  '<td>' + "매" + '</td>' +
+			    		  '<td width = "50px">'+ movie_ticket5*movie_price5+'</td>'+
+			    		  '<td>'+'원'+'</td>'+
+			    		  '</tr>')
 		}
 		
 		if (sol == "poster6"){
 			movie_ticket6 +=1;
 			alert(movie_Name6 + ' ' + movie_ticket6 +'매 장바구니에 담겼습니다.'   )
-			$('#tbd >li >.movie6').remove()
-			$('#tbd >li ').append("<li id='foodlist' class='movie6'>"+ movie_Name6 +" : " + movie_ticket6 +"매 " + (movie_ticket6*movie_price6) +"원 </li>");
+			$('.movie6').remove()
+			$('#chart2').append('<tr class="movie6">'+
+			    		  '<td>' + movie_Name6 + " : " + '</td>' +
+			    		  '<td width = "25px">' + movie_ticket6 + '</td>' +
+			    		  '<td>' + "매" + '</td>' +
+			    		  '<td width = "50px">'+ movie_ticket6*movie_price6 +'</td>'+
+			    		  '<td>'+'원'+'</td>'+
+			    		  '</tr>')
+
 		}
 	
 }
@@ -281,36 +325,75 @@ function foodlist(data){
 		
 					
 	
-			if($('#foodtotal #food1').length ==1){ // 담기 버튼을 클릭했을때 장바구니 객체 안에 food1 객체가 존재한다면 총 주문내역에 담기에있는 내용을 추가하는 코드
-			
-	        $('#tbd >li ').append("<li id='foodlist'>"+ item_Name +" : " + food1 +"개 " + (item_price *food1) +"원 </li>");
-	        }
+			if($('#foodtotal #food1').length ==1){
+	        //$('#tbd >li ').append("<li id='foodlist'>"+ item_Name +" : " + food1 +"개 " + (item_price *food1) +"원 </li>");
+		      $('#chart2').append('<tr>'+
+		    		  '<td>' + item_Name + " : " + '</td>' +
+		    		  '<td width = "25px">' + food1 + '</td>' +
+		    		  '<td>'+'     가격 : '+'</td>'+
+		    		  '<td width = "50px">'+ item_price*food8 +'</td>'+
+		    		  '</tr>')}
 
 			if($('#foodtotal #food2').length ==1){
-			$('#tbd >li ').append("<li id='foodlist'>"+ item_Name2 +" : " + food2 +"개 " + (item_price2 *food2) +"원 </li>");
-			}
+			//$('#tbd >li ').append("<li id='foodlist'>"+ item_Name2 +" : " + food2 +"개 " + (item_price2 *food2) +"원 </li>");
+				$('#chart2').append('<tr>'+
+			    		  '<td>' + item_Name2 + " : " + '</td>' +
+			    		  '<td width = "25px">' + food2 + '</td>' +
+			    		  '<td>'+'     가격 : '+'</td>'+
+			    		  '<td width = "50px">'+ item_price2*food8 +'</td>'+
+			    		  '</tr>')}
 			
 			if($('#foodtotal #food3').length ==1){
-			$('#tbd >li ').append("<li id='foodlist'>"+ item_Name3 +" : " + food3 +"개 " + (item_price3 *food3) +"원 </li>");
-			}
+			//$('#tbd >li ').append("<li id='foodlist'>"+ item_Name3 +" : " + food3 +"개 " + (item_price3 *food3) +"원 </li>");
+				$('#chart2').append('<tr>'+
+			    		  '<td>' + item_Name3 + " : " + '</td>' +
+			    		  '<td width = "25px">' + food3 + '</td>' +
+			    		  '<td>'+'     가격 : '+'</td>'+
+			    		  '<td width = "50px">'+ item_price3*food8 +'</td>'+
+			    		  '</tr>')}
 			
 			if($('#foodtotal #food4').length ==1){
-			$('#tbd >li ').append("<li id='foodlist'>"+ item_Name4 +" : " + food4 +"개 " + (item_price4 *food4) +"원 </li>");
-			}
+			//$('#tbd >li ').append("<li id='foodlist'>"+ item_Name4 +" : " + food4 +"개 " + (item_price4 *food4) +"원 </li>");
+				$('#chart2').append('<tr>'+
+			    		  '<td>' + item_Name4 + " : " + '</td>' +
+			    		  '<td width = "25px">' + food4 + '</td>' +
+			    		  '<td>'+'     가격 : '+'</td>'+
+			    		  '<td width = "50px">'+ item_price4*food8 +'</td>'+
+			    		  '</tr>')}
 			
 			if($('#foodtotal #food5').length ==1){
-			$('#tbd >li ').append("<li id='foodlist'>"+ item_Name5 +" : " + food5 +"개 " + (item_price5 *food5) +"원 </li>");
-			}
+			//$('#tbd >li ').append("<li id='foodlist'>"+ item_Name5 +" : " + food5 +"개 " + (item_price5 *food5) +"원 </li>");
+				$('#chart2').append('<tr>'+
+			    		  '<td>' + item_Name5 + " : " + '</td>' +
+			    		  '<td width = "25px">' + food5 + '</td>' +
+			    		  '<td>'+'     가격 : '+'</td>'+
+			    		  '<td width = "50px">'+ item_price5*food8 +'</td>'+
+			    		  '</tr>')}
 			
 			if($('#foodtotal #food6').length ==1){
-			$('#tbd >li ').append("<li id='foodlist'>"+ item_Name6 +" : " + food6 +"개 " + (item_price6 *food6) +"원 </li>");
-			}
+			//$('#tbd >li ').append("<li id='foodlist'>"+ item_Name6 +" : " + food6 +"개 " + (item_price6 *food6) +"원 </li>");
+				$('#chart2').append('<tr>'+
+			    		  '<td>' + item_Name6 + " : " + '</td>' +
+			    		  '<td width = "25px">' + food6 + '</td>' +
+			    		  '<td>'+'     가격 : '+'</td>'+
+			    		  '<td width = "50px">'+ item_price6*food8 +'</td>'+
+			    		  '</tr>')}
 			if($('#foodtotal #food7').length ==1){
-			$('#tbd >li ').append("<li id='foodlist'>"+ item_Name7 +" : " + food7 +"개 " + (item_price7 *food7) +"원 </li>");
-			}
+			//$('#tbd >li ').append("<li id='foodlist'>"+ item_Name7 +" : " + food7 +"개 " + (item_price7 *food7) +"원 </li>");
+				$('#chart2').append('<tr>'+
+			    		  '<td>' + item_Name7 + " : " + '</td>' +
+			    		  '<td width = "25px">' + food7 + '</td>' +
+			    		  '<td>'+'     가격 : '+'</td>'+
+			    		  '<td width = "50px">'+ item_price7*food8 +'</td>'+
+			    		  '</tr>')}
 			if($('#foodtotal #food8').length ==1){
-			$('#tbd >li ').append("<li id='foodlist'>"+ item_Name8 +" : " + food8 +"개 " + (item_price8 *food8) +"원 </li>");
-			}
+			//$('#tbd >li ').append("<li id='foodlist'>"+ item_Name8 +" : " + food8 +"개 " + (item_price8 *food8) +"원 </li>");
+				$('#chart2').append('<tr>'+
+			    		  '<td>' + item_Name8 + " : " + '</td>' +
+			    		  '<td width = "25px">' + food8 + '</td>' +
+			    		  '<td>'+'     가격 : '+'</td>'+
+			    		  '<td width = "50px">'+ item_price8*food8 +'</td>'+
+			    		  '</tr>')}
 	} 		
 		
     
