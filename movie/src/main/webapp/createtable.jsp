@@ -1,4 +1,4 @@
-<%@page contentType="text/xml; charset=utf-8" %>
+<%@ page contentType="text/xml; charset=utf-8" %>
 <%@ page language="java" import="java.sql.*"%>
 
 <%
@@ -6,10 +6,6 @@ String driver="oracle.jdbc.driver.OracleDriver";
 String user="scott";
 String pass="tiger";
 String dbURL="jdbc:oracle:thin:@localhost:1521:xe";
-
-
-
-String rtn_xml="";
 
 
 	Class.forName(driver);
@@ -39,7 +35,17 @@ String rtn_xml="";
 	
 	
 	Statement stmt = connection.createStatement();
-	ResultSet rs = stmt.executeQuery(sql);	
+	Statement stmt1 = connection.createStatement();
+	Statement stmt2= connection.createStatement();
+	Statement stmt3 = connection.createStatement();
+	Statement stmt4 = connection.createStatement();
+	
+	ResultSet rs = stmt.executeQuery(dt);	
+	ResultSet rs1 = stmt1.executeQuery(sql);	
+	ResultSet rs2= stmt2.executeQuery(commit);	
+	ResultSet rs3 = stmt3.executeQuery(it);
+	ResultSet rs4 = stmt4.executeQuery(commit2);	
+	
 	
 	rs.close();
 	stmt.close();
