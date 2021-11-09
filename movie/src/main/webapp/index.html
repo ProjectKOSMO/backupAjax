@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap" rel="stylesheet">
+    <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <title>Document</title>
+  
+
+   
+    
+</head>
+<body>
+    <header>
+    <nav class="navbar">
+        <div class="navbar__logo">
+            <i class="fas fa-credit-card"></i> <!--아마존 로고-->
+            <a href="">PopMovie</a>
+        </div>
+        <!--일렬정렬위해 div태그보단 순서있는 ul태그 활용-->
+        <ul class="navbar__menu">
+                <li class ="tab" data-tab-target="#tab1">영화</a></li>
+                <li class ="tab" data-tab-target="#tab2">먹거리</a></li>
+              <!--   <li class ="tab" data-tab-target="#tab3">음료</a></li> -->
+                <li class ="tab" data-tab-target="#tab4">장바구니</a></li>
+        </ul>
+        <ul class="navbar__icons">
+            <li><i class="fab fa-facebook"></i></li>
+            <li><i class="fab fa-google"></i></li>
+        </ul>
+               <!--햄버거 메뉴-->
+    
+    
+         <!--href="#"을 하면 클릭시 새로고침안됨-->
+         <a href="#" class="navbar__toogleBtn">
+         <i class="fas fa-bars"></i>
+         </a>
+    </nav>
+    </header> <!--popmovie 상단메뉴 -->
+    <section class="tabmenu1"> <!--영화 메뉴 탭-->
+    <div id ="tab1" data-tab-content class="items active">
+        <div>
+          <img src="./files/poster/poster1.jpg" class="inner_back" id="main_image" >
+        </div>
+        <div class="movie_list_box">
+            <ul class="movie_list">
+                <li class="poster"> <img src="./files/poster/poster1.jpg" alt=""></li>
+                <li class="poster"> <img src="./files/poster/poster2.jpg" alt=""></li>
+                <li class="poster"> <img src="./files/poster/poster3.jpg" alt=""></li>
+                <li class="poster"> <img src="./files/poster/poster4.jpg" alt=""></li>
+                <li class="poster"> <img src="./files/poster/poster5.jpg" alt=""></li>
+                <li class="poster"> <img src="./files/poster/poster6.jpg" alt=""></li>
+            </ul>
+        </div>   
+    </div>
+    </section>
+    <section class ="tabmenu2"> <!--음식 메뉴 탭-->
+        <div id ="tab2" data-tab-content class="items">
+            <div class ="menupan">
+               <table border= 5  class="menupan_image">
+                <tr>
+                    <td>
+                        <div   class="food">
+                          <img src="./files/food/popcorn.jpg" alt="" width="300" height="200">
+                          <div class="price">
+                            7000원
+                       </div>
+                        </div>
+                       
+                    </td>
+                    <td>
+                        <div  class="food">
+                            <img src="./files/food/popcorn2.jpg" alt="" width="300" height="200">
+                            <div class="price">
+                            5000원
+                        </div>
+                        </div>
+                        
+                    
+                    </td>
+                    <td><div  class="food">
+                        <img src="./files/food/sqaud.jpg" alt="" width="300" height="200">
+                        <div class="price">
+                            4000원
+                       </div>
+                      </div>
+                      </td>
+                    <td><div  class="food">
+                        <img src="./files/food/hotdog.jpg" alt="" width="300" height="200">
+                        <div class="price">
+                            3000원
+                       </div>
+                      </div>
+                  </td>
+                </tr>
+                <tr>
+                    <td><div  class="food">
+                        <img src="./files/food/nachos.jpg" alt="" width="300" height="200">
+                        <div class="price">
+                            4000원
+                       </div>
+                      </div>
+                     </td>
+                    <td><div  class="food">
+                        <img src="./files/food/nuts.jpg" alt="" width="300" height="200">
+                        <div class="price">
+                            3000원
+                       </div>
+                      </div>
+                      </td>
+                    <td><div  class="food">
+                        <img src="./files/food/waffle.jpg" alt="" width="300" height="200">
+                        <div class="price">
+                            3000원
+                       </div>
+                      </div>
+                    </td>
+                    <td><div  class="food">
+                        <img src="./files/food/ddock.jpg" alt="" width="300" height="200">
+                        <div class="price">
+                            3000원
+                       </div>
+                      </div>
+                      </td>
+                </tr>
+                <tr>
+                    <td  colspan="4">
+                        <div><h3>장바구니</h3></div>
+                    </td>
+                    
+                </tr>
+                <tr>
+                    <td id="foodtotal" colspan="3">
+                      
+                    </td>
+                    <td>
+                         <input type="button" id="btnSelect" value="담기">
+                         <input type="button" id="btnSelect1" value="비우기">
+                    </td>
+                </tr>
+               </table>
+            </div>
+        </div>
+    </section>
+    <section class ="tabmenu3"> <!--음료 메뉴 탭-->
+    
+    </section>
+    <section class ="tabmenu4"> <!-- 주문내역 탭-->
+                <div id ="tab4" data-tab-content class="items">
+                    <div class="chart">
+                        <ul id="tbd" class="maketlist">
+                         <h2>총 주문내역  <button id="button1">초기화</button></h2>
+                           	   <li></li>
+                            
+                        </ul>
+
+                    </div>
+                </div>
+    </section>            
+    <script type="text/javascript" src="./js/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="./js/main.js"></script>
+</body>
+</html>
