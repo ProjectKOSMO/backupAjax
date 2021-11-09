@@ -150,7 +150,7 @@ function submit_poster(s){ // 메인포스터 더블클릭시 장바구니에 �
 			alert(movie_Name4 + ' ' + movie_ticket4 +'매 장바구니에 담겼습니다.'   )
 			$('.movie4').remove()
 			$('#chart2').append('<tr class="movie4">'+
-			    		  '<td>' + movie_Name + " : " + '</td>' +
+			    		  '<td>' + movie_Name4 + " : " + '</td>' +
 			    		  '<td width = "25px">' + movie_ticket4 + '</td>' +
 			    		  '<td>' + "매" + '</td>' +
 			    		  '<td width = "50px">'+ movie_ticket4*movie_price4 +'</td>'+
@@ -273,7 +273,7 @@ $('.tabmenu2 #btnSelect').click(function(){ //담기버튼 클릭시 주문내�
 		if($('#foodtotal div').length <= 0) { // 장바구니가 비어있을경우 경고발생 한개의 데이터라도 존재하면 동작하는 코드
 			alert("장바구니가 비었습니다.")
  	    }else{
-			$('#chart2 tr').remove()
+			
 			alert("장바구니에 등록되었습니다.")
 			$.ajax({
 			 url : "food.jsp",
