@@ -211,7 +211,7 @@ $('.menupan_image .food img').dblclick(function(){ //먹거리 더블클릭시
 function img_check(c){ // 먹거리 더블클릭시 그아래에 존재하는 장바구니에 담는 코드
 	var osd = JSON.stringify($(c).attr('src')).slice(14,-5)
 	
-	if (osd == "popcorn"){
+	if (osd == "popcorn1"){
  	 	food1 += 1;   
 		$('#foodtotal #food1').remove()
 		$('#foodtotal').append("<div id='food1'>오리지날 팝콘 X  "+food1+" </div>")
@@ -273,6 +273,7 @@ $('.tabmenu2 #btnSelect').click(function(){ //담기버튼 클릭시 주문내�
 		if($('#foodtotal div').length <= 0) { // 장바구니가 비어있을경우 경고발생 한개의 데이터라도 존재하면 동작하는 코드
 			alert("장바구니가 비었습니다.")
  	    }else{
+			$('#chart2 tr').remove()
 			alert("장바구니에 등록되었습니다.")
 			$.ajax({
 			 url : "food.jsp",
@@ -330,8 +331,9 @@ function foodlist(data){
 		      $('#chart2').append('<tr>'+
 		    		  '<td>' + item_Name + " : " + '</td>' +
 		    		  '<td width = "25px">' + food1 + '</td>' +
-		    		  '<td>'+'     가격 : '+'</td>'+
-		    		  '<td width = "50px">'+ item_price*food8 +'</td>'+
+		    		  '<td>'+'     개 '+'</td>'+
+		    		  '<td width = "50px">'+ item_price*food1 +'</td>'+
+		    		  '<td>' + '원' + '</td>' +
 		    		  '</tr>')}
 
 			if($('#foodtotal #food2').length ==1){
@@ -339,8 +341,9 @@ function foodlist(data){
 				$('#chart2').append('<tr>'+
 			    		  '<td>' + item_Name2 + " : " + '</td>' +
 			    		  '<td width = "25px">' + food2 + '</td>' +
-			    		  '<td>'+'     가격 : '+'</td>'+
-			    		  '<td width = "50px">'+ item_price2*food8 +'</td>'+
+			    		  '<td>'+'     개 '+'</td>'+
+			    		  '<td width = "50px">'+ item_price2*food2 +'</td>'+
+			    		  '<td>' + '원' + '</td>' +
 			    		  '</tr>')}
 			
 			if($('#foodtotal #food3').length ==1){
@@ -348,17 +351,20 @@ function foodlist(data){
 				$('#chart2').append('<tr>'+
 			    		  '<td>' + item_Name3 + " : " + '</td>' +
 			    		  '<td width = "25px">' + food3 + '</td>' +
-			    		  '<td>'+'     가격 : '+'</td>'+
-			    		  '<td width = "50px">'+ item_price3*food8 +'</td>'+
+			    		  '<td>'+'     개 '+'</td>'+
+			    		  '<td width = "50px">'+ item_price3*food3 +'</td>'+
+			    		  '<td>' + '원' + '</td>' +
 			    		  '</tr>')}
 			
+
 			if($('#foodtotal #food4').length ==1){
 			//$('#tbd >li ').append("<li id='foodlist'>"+ item_Name4 +" : " + food4 +"개 " + (item_price4 *food4) +"원 </li>");
 				$('#chart2').append('<tr>'+
 			    		  '<td>' + item_Name4 + " : " + '</td>' +
 			    		  '<td width = "25px">' + food4 + '</td>' +
-			    		  '<td>'+'     가격 : '+'</td>'+
-			    		  '<td width = "50px">'+ item_price4*food8 +'</td>'+
+			    		  '<td>'+'     개 '+'</td>'+
+			    		  '<td width = "50px">'+ item_price4*food4 +'</td>'+
+			    		  '<td>' + '원' + '</td>' +
 			    		  '</tr>')}
 			
 			if($('#foodtotal #food5').length ==1){
@@ -366,8 +372,9 @@ function foodlist(data){
 				$('#chart2').append('<tr>'+
 			    		  '<td>' + item_Name5 + " : " + '</td>' +
 			    		  '<td width = "25px">' + food5 + '</td>' +
-			    		  '<td>'+'     가격 : '+'</td>'+
-			    		  '<td width = "50px">'+ item_price5*food8 +'</td>'+
+			    		  '<td>'+'     개 '+'</td>'+
+			    		  '<td width = "50px">'+ item_price5*food5 +'</td>'+
+			    		  '<td>' + '원' + '</td>' +
 			    		  '</tr>')}
 			
 			if($('#foodtotal #food6').length ==1){
@@ -375,25 +382,47 @@ function foodlist(data){
 				$('#chart2').append('<tr>'+
 			    		  '<td>' + item_Name6 + " : " + '</td>' +
 			    		  '<td width = "25px">' + food6 + '</td>' +
-			    		  '<td>'+'     가격 : '+'</td>'+
-			    		  '<td width = "50px">'+ item_price6*food8 +'</td>'+
+			    		  '<td>'+'     개 '+'</td>'+
+			    		  '<td width = "50px">'+ item_price6*food6 +'</td>'+
+			    		  '<td>' + '원' + '</td>' +
 			    		  '</tr>')}
 			if($('#foodtotal #food7').length ==1){
 			//$('#tbd >li ').append("<li id='foodlist'>"+ item_Name7 +" : " + food7 +"개 " + (item_price7 *food7) +"원 </li>");
 				$('#chart2').append('<tr>'+
 			    		  '<td>' + item_Name7 + " : " + '</td>' +
 			    		  '<td width = "25px">' + food7 + '</td>' +
-			    		  '<td>'+'     가격 : '+'</td>'+
-			    		  '<td width = "50px">'+ item_price7*food8 +'</td>'+
+			    		  '<td>'+'     개 '+'</td>'+
+			    		  '<td width = "50px">'+ item_price7*food7 +'</td>'+
+			    		  '<td>' + '원' + '</td>' +
 			    		  '</tr>')}
 			if($('#foodtotal #food8').length ==1){
 			//$('#tbd >li ').append("<li id='foodlist'>"+ item_Name8 +" : " + food8 +"개 " + (item_price8 *food8) +"원 </li>");
 				$('#chart2').append('<tr>'+
 			    		  '<td>' + item_Name8 + " : " + '</td>' +
 			    		  '<td width = "25px">' + food8 + '</td>' +
-			    		  '<td>'+'     가격 : '+'</td>'+
+			    		  '<td>'+'     개 '+'</td>'+
 			    		  '<td width = "50px">'+ item_price8*food8 +'</td>'+
+			    		  '<td>' + '원' + '</td>' +
 			    		  '</tr>')}
+			
+			
+			const table = document.getElementById('chart2');
+			  
+			  // 합계 계산
+			  let sum = 0;
+			  for(let i = 0; i < table.rows.length; i++)  {
+			    sum += parseInt(table.rows[i].cells[3].innerHTML);
+			  }
+			  
+			  $('#chart2').append('<tr>'+
+		    		  '<td>' + '합계'+ ' : ' + '</td>' +
+		    		  '<td width = "25px">' + '</td>' +
+		    		  '<td></td>'+
+		    		  '<td width = "50px">'+ sum +'</td>'+
+		    		  '<td>' + '원'+'</td>' +
+		    		  '</tr>')
+	 		
+		
 	} 		
 		
     
@@ -410,7 +439,8 @@ $('.tabmenu4 #button1').click(function(){ //초기화 버튼 클릭
 })
 function reset(){ // 초기화버튼 클릭시 총주문내역 삭제
 
-	$('.tabmenu4 #tbd #foodlist').remove()
+	
+	$('#chart2 tr').remove()
 }
 	
 
