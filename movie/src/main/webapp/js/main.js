@@ -184,6 +184,23 @@ function submit_poster(s){ // 메인포스터 더블클릭시 장바구니에 �
 			    		  '</tr>')
 
 		}
+		
+		$('#chart4 tr').remove()
+			const table = document.getElementById('chart2');
+			  
+			  // 합계 계산
+			  let sum = 0;
+			  for(let i = 0; i < table.rows.length; i++)  {
+			    sum += parseInt(table.rows[i].cells[3].innerHTML);
+			  }
+			  
+			  $('#chart4').append('<tr>'+
+		    		  '<td>' + '합계'+ ' : ' + '</td>' +
+		    		  '<td width = "25px">' + '</td>' +
+		    		  '<td></td>'+
+		    		  '<td width = "50px">'+ sum +'</td>'+
+		    		  '<td>' + '원'+'</td>' +
+		    		  '</tr>')
 	
 }
 }
@@ -406,6 +423,8 @@ function foodlist(data){
 			    		  '</tr>')}
 			
 			
+			
+			$('#chart4 tr').remove()
 			const table = document.getElementById('chart2');
 			  
 			  // 합계 계산
@@ -414,7 +433,7 @@ function foodlist(data){
 			    sum += parseInt(table.rows[i].cells[3].innerHTML);
 			  }
 			  
-			  $('#chart2').append('<tr>'+
+			  $('#chart4').append('<tr>'+
 		    		  '<td>' + '합계'+ ' : ' + '</td>' +
 		    		  '<td width = "25px">' + '</td>' +
 		    		  '<td></td>'+
@@ -439,7 +458,8 @@ $('.tabmenu4 #button1').click(function(){ //초기화 버튼 클릭
 })
 function reset(){ // 초기화버튼 클릭시 총주문내역 삭제
 
-	
+	$('#chart4 tr').remove()
+
 	$('#chart2 tr').remove()
 }
 	
