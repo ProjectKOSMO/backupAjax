@@ -1,21 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&display=swap');
-
-.navbar{
+/* ===============================================최상단 popmovie 메뉴==========================================*/
+.navbar{  
     display : flex; 
-    justify-content: space-between; /*以묒떖異� 諛곗튂 (�쁽�옱�뒗 以묒떖異뺤씠 �닔�룊異�)*/
-    align-items: center; /*諛섎�異�(�쁽�옱�뒗 諛섎�異뺤씠 �닔吏곸텞)�쓽 �냽�꽦媛� �솢�슜 */
+    justify-content: space-between; 
+    align-items: center; 
     background-color:gainsboro;
-    padding : 8px 12px; /*�쐞�븘�옒 8px, �뼇�쁿 12px*/
+    padding : 8px 12px; 
 }
  
 
 
-body {font-family: 'Mochiy Pop P One', sans-serif;
-    margin : 0; /*諛붾뵒�깭洹� margin defalut媛� �븣臾몄뿉 �씛�꽑 諛쒖깮. �씠瑜� �젣嫄�*/
-    font-family: 'Source Sans Pro';
-    background-color: black;
-    text-align: center;
-}
+
 a {
     text-decoration: none;/*紐⑤뱺 ankor�깭洹몄쓽 而⑦뀗痢좎뿉�뒗 defalut濡� 諛묒쨪 議댁옱. �씠瑜� �젣嫄�*/
     color :black;
@@ -66,7 +61,14 @@ a {
     font-size: 24px;
     color : black;
 }
-/*===============================================================================�꺆硫붾돱1 �쁺�솕*/
+/* =====================================================================================body 전체설정 	*/
+body {font-family: 'Mochiy Pop P One', sans-serif;
+    margin : 0; 
+    font-family: 'Source Sans Pro';
+    background-color: black;
+    text-align: center;
+}
+/*========================================================================================영화 탭*/
 .items{
     display: none;
     margin-top: 1%;
@@ -106,7 +108,7 @@ a {
     
 }
 
-.poster{
+.poster{ /*=============================하단 포스터================================= 6개*/
     margin-left: 1%;
     margin-right: 1%;
     
@@ -119,7 +121,7 @@ a {
     
  
 }
-/*=================================================================================�꺆硫붾돱2 二쇰Ц�궡�뿭*/
+/*=================================================================================먹거리 메뉴판*/
 .menupan{
     background:white;
 

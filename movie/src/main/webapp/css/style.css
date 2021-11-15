@@ -1,0 +1,301 @@
+@import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&family=Oxygen:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Mochiy+Pop+P+One&family=Oxygen:wght@300;400;700&display=swap');
+
+
+
+
+
+
+
+
+/* ===============================================최상단 popmovie 메뉴==========================================*/
+.navbar{  
+    display : flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    background-color:black;
+    color:white;
+    padding : 8px 12px;
+    
+     
+}
+ 
+
+
+
+a {
+    text-decoration: none;/*紐⑤뱺 ankor�깭洹몄쓽 而⑦뀗痢좎뿉�뒗 defalut濡� 諛묒쨪 議댁옱. �씠瑜� �젣嫄�*/
+    color :black;
+
+   /* text-decoration: none;/*紐⑤뱺 ankor�깭洹몄쓽 而⑦뀗痢좎뿉�뒗 defalut濡� 諛묒쨪 議댁옱. �씠瑜� �젣嫄�*/
+    /*color :var(--text-color);*/
+}
+
+
+.navbar__logo{
+    font-size: 24px;
+    color:white;
+}
+
+.navbar__logo i{
+    color:white;
+}
+
+.pop{
+	color:white;
+}
+
+
+.navbar__menu {
+    display: flex; /*硫붾돱瑜� �씪�젹濡� 諛곗튂*/
+    list-style: none; /*ul�깭洹몄쓽 �젏�쓣 �젣嫄�*/
+    padding-left: 0; /*�뙣�뵫�븣臾몄뿉 �슦痢≪쑝濡� 移섏슦爾먯엳�뒗寃껋쓣 �릺�룎由�*/
+}
+
+.navbar__menu li{
+    padding : 8px 12px; /*留덉슦�뒪 �겢由��쁺�뿭�솗蹂�*/   
+}
+
+.navbar__menu li:hover {
+    background-color: tomato;
+    border-radius: 10px; /*�뀒�몢由� �뫁湲�寃�*/
+    color:white;
+}
+
+.navbar__icons{
+    padding-left : 0px; /*媛��슫�뜲 �젙�젹*/
+    list-style: none;
+    color : white;
+    display: flex;
+}
+
+.navbar__icons li {
+    padding : 8px 12px;
+}
+.navbar__toogleBtn {
+    display: none;
+    position: absolute; /*�냼�냽�맂 諛곗튂�� 臾닿��븯寃� �쐞移� �꽕�젙*/
+    right : 15px; /*�슦痢≪뿉�꽌 32px 嫄곕━�몺*/
+    font-size: 24px;
+    color : black;
+}
+/* =====================================================================================body 전체설정 	*/
+body {font-family: 'Mochiy Pop P One', sans-serif;
+    margin : 0; 
+    font-family: 'Oxygen', sans-serif;
+    background-color: white;
+    text-align: center;
+    letter-spacing: 2px;
+}
+/*========================================================================================영화 탭*/
+.items{
+    display: none;
+    margin-top: 1%;
+    width: auto;
+    overflow:hidden;
+    
+}
+.items.active{
+    display:inline-block;
+}
+.inner_back{    
+	/*
+    width: 30%;
+    height: 15%;
+    
+    max-width:100%;
+    max-height:100%;
+*/
+ width:500px;
+ height:500px;
+ box-shadow:30px 20px 20px rgba(0, 0, 0, 0.4);
+}
+
+
+
+
+
+.movie_list_box{
+    margin-top: 3%;
+    width: auto;
+    height: auto;
+    display: inline-block;
+
+   
+
+}
+.movie_list{
+    list-style: none;
+    margin:0;
+    padding:0;
+    height: 30vh;
+    width:70vw;
+    display: flex;
+
+}
+
+.poster{ /*=============================하단 포스터================================= 6개*/
+    margin-left: 1%;
+    margin-right: 1%;
+    border-radius: 10px;
+    height:100%;
+    width: 15%;
+    max-height: 100%;
+    display:flex;
+   	
+    overflow: hidden;
+    
+}
+.poster:hover{
+	box-shadow:10px 20px 10px rgba(0, 0, 0, 0.4);
+}
+
+
+/*=================================================================================먹거리 메뉴판*/
+.menupan{
+    background:white;
+
+
+}
+
+.menupan_image{
+   min-width: 100%;
+   max-height: 100%;
+   width: 120px;
+   height: 120px;
+
+}
+.menupan_image > li{
+
+   width: 0px;
+   height: 120px;   
+}
+
+.food{
+    vertical-align: top;
+}
+.price{
+    vertical-align:bottom;
+    background-color: gainsboro;
+    font-size: 20px;
+    
+}
+.foodtotal{
+    background-color: black;
+    text-align: center;
+}
+/*=================================================================================�꺆硫붾돱3 二쇰Ц�궡�뿭*/
+/*=================================================================================�꺆硫붾돱4 二쇰Ц�궡�뿭*/
+.chart{
+    text-align: center;
+    background-color: white;
+    width:100vh;
+    height:150vh;
+ 	
+    border:2px solid rgba(0,0,0,0.2);
+    border-radius: 120px;
+    overflow: hidden;
+}
+.maketlist{
+    font-size: 4vh;
+    list-style-type: none;
+    text-align: flex;
+}
+
+
+.tabmenu4{
+    text-align: center;
+}
+
+
+/*
+�젅�씠�븘�썐�쓣 諛섏쓳�삎�쑝濡� 留뚮뱾�븣�뒗 media荑쇰━ �궗�슜
+�듅�젙 �궗�씠利� �씠�븯媛� �맆 寃쎌슦, �쎒 �궗�씠�듃�쓽 硫붾돱媛� �젣��濡� 蹂댁씠吏� �븡�쓬
+�씠�윺�븣 硫붾돱諛붾�� �븘�옒濡� �궡�젮媛��룄濡� 留뚮뱾�옄.
+*/
+
+@media screen and (max-width:768px) {
+    /*�넗湲�,�뻹踰꾧굅 踰꾪듉*/
+    .navbar__toogleBtn{
+        display: block;
+    }
+	
+ 
+    /*濡쒓퀬,硫붾돱諛붽� �닔吏곸쑝濡� �굹�삤�룄濡�*/
+    .navbar {
+        flex-direction: column;
+        align-items : flex-start; /*濡쒓퀬,硫붾돱諛� 紐⑤몢 �쇊履� �젙�젹*/
+        padding : 8px 24px; /*hover�떆 �븳以� 媛��뱷 �깋�긽�몴�떆 �븞�릺�룄濡� */
+    }
+    /*硫붾돱諛붽� �븳以꾩뿉 �븯�굹�뵫*/
+    .navbar__menu{
+        display: none;
+        flex-direction: column;
+        align-items: center; /*硫붾돱諛붾쭔 媛��슫�뜲 �젙�젹 */
+        width : 100%; /*硫붾돱諛붿쓽 媛��슫�뜲 �젙�젹�쓣 �쐞�빐 �꼫鍮꾨�� �뒛由�*/
+    }
+
+    /*硫붾돱諛� hover�떆 而⑦뀗痢좊컯�뒪媛� �븘�땶 �븳 以꾩뿉 �깋�긽�몴�떆 */
+    .navbar__menu li{
+        width: 100%;
+        text-align: center; /*text�뒗 �쇊履� �젙�젹�씠 湲곕낯媛믪씠誘�濡� center濡� �닔�젙*/
+    }
+
+    /*濡쒓퀬瑜� 媛��슫�뜲濡�*/
+    .navbar__icons {
+        display: none;
+        justify-content: center; /*濡쒓퀬�뒗 �쁽�옱 諛섎�異뺤씠誘�濡� justify-content �궗�슜*/
+        width : 100%;
+    }
+    .navbar__menu.active,
+    .navbar__icons.active {
+        display :flex;
+    }
+    .inner_back{
+    	width: 350px;
+    	height:350px;
+    }
+    .poster{
+    	object-fit:cover;
+    }
+}
+
+#btnSelect,
+#btnSelect1 {
+	width:50px;
+	height:50px;
+	border:none;
+	border-radius:25px;
+}
+
+#btnSelect:hover,
+#btnSelect1:hover{
+	background-color:tomato;
+	color:white;
+}
+
+
+
+#button1{
+	width:50px;
+	height:50px;
+	border:none;
+	border-radius:25px;
+}
+#button1:hover{
+	background-color:tomato;
+	color:white;
+}
+#tbd{
+	font-family: 'Arimo', sans-serif;	
+	
+}
+
+
+
+
+
+
+
+ 

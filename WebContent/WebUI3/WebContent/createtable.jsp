@@ -18,7 +18,6 @@ String rtn_xml="";
 	
 	String dt  = "drop table cinema";
 	String sql = "create table cinema(mgroup number(4),mname varchar(20),mprice number(8))";
-	String commit  = "commit";
 	String it = "INSERT ALL	INTO cinema (mgroup, mname, mprice) VALUES (1, '극한직업',14000)"
 			+ "INTO cinema (mgroup, mname, mprice) VALUES (1, '소울',18000)"
 			+ "INTO cinema (mgroup, mname, mprice) VALUES (1, '알라딘',18000)"
@@ -39,9 +38,16 @@ String rtn_xml="";
 	
 	
 	Statement stmt = connection.createStatement();
+	ResultSet rs0 = stmt.executeQuery(dt);	
+	rs0.close(); 
+
 	ResultSet rs = stmt.executeQuery(sql);	
+	rs.close(); 
+	ResultSet rs1 = stmt.executeQuery(it);
+	rs1.close(); 
+	ResultSet rs2 = stmt.executeQuery(commit2);
+	rs2.close(); 
 	
-	rs.close();
 	stmt.close();
 	connection.close();
 

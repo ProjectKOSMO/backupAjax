@@ -1,0 +1,8 @@
+create table coffee_table(
+ESPRESSO       NUMBER(30) ,  
+AMERICANO      NUMBER(30) , 
+CAFFELATTE     NUMBER(30) , 
+CAPPUCINO      NUMBER(30) ,
+DOLCHELATTE    NUMBER(30) , 
+CAFFEMOCA      NUMBER(30) , 
+TOTAL          VARCHAR2(30) );
