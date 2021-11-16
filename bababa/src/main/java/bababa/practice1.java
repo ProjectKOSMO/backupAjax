@@ -20,7 +20,7 @@ public class practice1 {
 				count++;
 			}
 		}else if(num <=1000){
-			
+			;
 		}
 		
 	}System.out.println(count);
