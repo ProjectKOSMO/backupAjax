@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>jquery event</title>
+
+<style type="text/css">
+	.bg { background : yellow; }
+	.border { border : 3px dotted red; }
+</style>
+
+<script src='../lib/jquery-3.1.1.js' type="text/javascript"></script>
+<script type="text/javascript"> 
+$(function(){
+	//원래 이벤트 방식
+	//$('li').css('cursor','pointer'); // 손가락 넣기
+	//$('li').bind('click',function(){ // 함수랑 연결할 때  bind
+	//	$('#result').text( $(this).text())
+	//})
+	//축약형 이걸 자주 씀 
+	//$('li').click(function(){
+		//$('#result').text($(this).text())
+		//$('#result').text( this.innerHTML) //자바스크립트 코딩 이거임
+	})
+
+
+	//$('li').click(function(evt){
+	//	$('#result').text($(this).text())
+		//alert(evt)
+		//구체적으로 받으려면
+		//console.log(evt)
+	//})
+	$('h1').css({'cursor' : 'pointer'})
+	$('h1').click(function(evt1){
+		var li = $('<li/>').text(new Date())
+		$('ul').append(li)
+	})
+	
+	// ★★★★★★★★★★★★★★★★★★★★★★★★★★
+	// 동적으로 생성된 요소의 이벤트 처리 
+	$('ul').on('click')
+})
+</script>
+
+</head>
+<body>
+	<h1>제이쿼리 이벤트</h1>
+	 <ul>
+		<li>부에노스 아이레스</li>
+		<li>바르셀로나</li>
+		<li>리마</li>
+		<li>라파스</li>
+	 </ul>	
+	<div id="result"></div>
+</body>
+</html>

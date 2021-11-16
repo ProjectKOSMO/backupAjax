@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>jquery filter</title>
+
+<!--4. class 속성제어 -->
+<style type="text/css">
+	.bg { background : yellow; }
+	.border { border : 3px dotted green; }
+	.borderRed { border : 3px dotted red; }
+	.borderBlue { border : 3px dotted blue; }
+</style>
+
+<script src='../lib/jquery-3.1.1.js' type="text/javascript"></script>
+<script type="text/javascript"> 
+$(function(){
+	//$('li').addClass('border');
+	
+	// 태그 요소들 카페에 있음.
+	// 직접해보자!
+	
+	//$('li:even').addClass('bg');
+	//$('li:eq(3)').addClass('border');
+	//$('li:lt(2)').addClass('bg');
+	//$('li:not(:first)').addClass('borderRed');
+	//$("li:contains('튀김')").addClass('borderBlue');
+	//네 번째 요소 테두리 변경
+	// 세번째 보다 작은 요소들 배경 변경
+	// 첫번째를 제외한 요소들 테두리 변경 //
+	//'튀김'을 포함한 요소들 
+	$("li").click(function(){
+		$(this).toggleClass('bg')
+		//toggle --> hover처럼 마우스 올라갔다 내려갔다 처럼 클래스를 넣어줬다 빼줬다 하는 것 
+	})
+})
+
+</script>
+
+</head>
+<body>
+		<h1>제이쿼리 시작</h1>
+		<h2>내가 좋아하는 음식 </h2>
+		<ul id="food">
+			<li>떡볶이</li>
+			<li>어묵</li>
+			<li>닭튀김</li>
+			<li>돼지튀김</li>
+			<li>소튀김</li>
+			<li>구두튀김</li>
+		</ul>
+		<!-- 2. 추가하고 다시 확인 -->
+		<h2>내가 좋아하는 술</h2>
+		<ul>
+			<li>와인</li>
+			<li>맥주</li>
+			<li>막걸리</li>
+			<li>소주</li>
+		</ul>
+	<div id="result"></div>
+</body>
+</html>
